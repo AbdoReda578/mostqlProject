@@ -1,0 +1,182 @@
+/* Global reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+.s {
+    display: flex;
+}
+
+
+/* Color Variables */
+:root {
+    --primary-color: #b82034;
+    --secondary-color: #fff;
+    --font-color: #333;
+    --bg-color: #f6f6f6;
+    --icon-bg: #fff;
+    --icon-color: #b82034;
+}
+
+/* Basic page styling */
+body {
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+/* Timeline Layout */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items */
+}
+
+/* Vertical connector */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Timeline item styling */
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding: 20px;
+    width: 90%; /* Full width for smaller screens */
+    max-width: 450px; /* Max width for larger screens */
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s ease;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px);
+}
+
+/* Timeline item positions */
+.timeline-item:nth-child(odd) {
+    align-self: flex-start; /* Left alignment for odd items */
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end; /* Right alignment for even items */
+    transform: translateX(0); /* Align to the right */
+}
+
+/* Visible class for scroll effect */
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Scroll-in effect */
+}
+
+/* Timeline connector */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Position the connector based on the item */
+.timeline-item:nth-child(odd)::after {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+/* Icon styles */
+.timeline-icon {
+    position: absolute;
+    top: 15px;
+    right: -60px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--icon-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.timeline-icon i {
+    font-size: 18px;
+    color: var(--icon-color);
+}
+
+/* Alternate icon positioning */
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -60px;
+}
+
+/* Timeline content */
+.timeline-content {
+    padding: 15px;
+    background-color: var(--secondary-color);
+}
+
+.timeline-content h2 {
+    font-size: 1.8rem;
+    color: var(--font-color);
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 1.4rem;
+    color: var(--font-color);
+}
+
+/* Scroll animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item.visible {
+    animation: fadeInUp 0.6s ease forwards;
+}
+@media (max-width: 400px) {
+    .timeline {
+        padding: 40px 0; /* Reduced padding for smaller screens */
+        color: transparent;
+        background-color: transparent;
+    }
+
+    .timeline-item {
+        width: 100%; /* Full width on small devices */
+        margin: 10px 0; /* Reduced margin */
+    }
+
+    .timeline-item {
+        opacity: 1; /* Make items visible on mobile by default */
+        transform: translateY(0); /* No translate for visible items */
+        animation: none; /* Disable animation for visible items */
+    }
+}

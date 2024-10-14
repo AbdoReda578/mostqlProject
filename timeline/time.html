@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Roadmap</title>
+    <link rel="stylesheet" href="time.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <div class="timeline s">
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="timeline-content">
+                <h2>Register</h2>
+                <p>Register using the application form via the Home page "apply now".</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="timeline-content">
+                <h2>Apply Form</h2>
+                <p>Fill in all the required information.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fas fa-bullseye"></i>
+            </div>
+            <div class="timeline-content">
+                <h2>Wishs</h2>
+                <p>FApply to the schools you wish to join.</p>
+            </div>
+            
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="timeline-content">
+                <h2>choice the schools</h2>
+                <p>List and rank your top 3 school choices, as the first choice will be given priority, and click the "Submit Preferences" button</p>
+            </div>
+            
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="timeline-content">
+                <h2>Wait for confirmation</h2>
+                <p>You will receive a confirmation message indicating successful registration.</p>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+    
+    <script>
+        // Scroll animation for revealing timeline items
+        window.addEventListener('scroll', function() {
+            const items = document.querySelectorAll('.timeline-item');
+            const windowHeight = window.innerHeight;
+            const revealPoint = 150;
+
+            items.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+
+                if (itemTop < windowHeight - revealPoint) {
+                    item.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

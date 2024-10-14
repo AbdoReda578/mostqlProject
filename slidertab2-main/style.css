@@ -1,0 +1,115 @@
+body{
+    background-image: linear-gradient(white);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+
+:root {
+    --primary-color: #b82034;
+    --secondary-color: #fff3f3;
+    --font-color: #777;
+    --background-color: #f6f2f2;
+    --dark-background: rgba(4, 9, 30, 0.7);
+}
+
+
+
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 80px;
+    right: 140px;
+    width: 100%;
+    height: 400px;
+}
+
+.item{   
+    position: absolute;
+    width: 500px;
+    color: var(--background-color);
+    height: 320px;
+    text-align: justify;
+    border-radius: 10px;
+    padding: 20px;
+    transition:  0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+}
+
+
+
+
+
+
+
+.a1{
+    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('../pic/ach1.jpg') center/cover;
+}
+.a2 {
+    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('../pic/ach2.jpg') center/cover;
+}
+.a3{
+    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('../pic/ach3.jpg') center/cover;
+}
+.a4{
+    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('../pic/ach4.jpg') center/cover;
+}
+.a5{
+    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('../pic/ach5.jpg') center/cover;
+}
+.a6{
+    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('../pic/ach6.jpg') center/cover;
+}
+
+h2{
+    background-color: rgba(184, 32, 52, 0.6); 
+   padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: fit-content;
+    box-shadow: 0 0 10px rgba(184, 32, 52, 0.8);
+}
+
+
+
+
+
+
+
+
+
+#next{
+    position: absolute;
+    right: 0px;
+    top: 40%;
+}
+#prev{
+    position: absolute;
+    left: 0px;
+    top: 40%;
+}
+#prev, #next{
+    color: #000;
+    background: none;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+#prev:hover,
+#next:hover{
+    opacity: 1;
+}

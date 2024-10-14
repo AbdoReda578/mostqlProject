@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;300;500;700;800&display=swap" rel="stylesheet">
+    <title>Location</title>
+</head>
+<body>
+    <div class="scrbar">
+        <img class = "USAID" src="pic/USAID.png" alt="USAID">
+        <img class = "IATS" src="pic/IATS.png" alt="IATS">
+        <img class = "GOV" src="pic/GOV.png" alt="GOV">
+
+
+    </div>
+    <div class="Themain">
+        <nav>
+            <div class="logo-container">
+                <a href="Index.html">
+                    <img src="pic/logo.svg" alt="First Logo">
+                </a>
+                <a href="Index.html">
+                    <img src="pic/eva-cosmetics-logo_1.png" alt="Second Logo">
+                </a>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Achievements.html">Achievements</a></li>
+                    <li><a href="Location.html">Location</a></li>
+                    <li><a href="App-req.html">Application requirements</a></li>
+                    <li><a href="slider_1-main/slider.html">OUR STAFF</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="main">
+
+        <div class="location-header">
+            <h1>Our Location</h1>
+            <p>Visit us at our headquarters or find us on the map below.</p>
+        </div>
+
+        <div class="location-content">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9133.30011459307!2d30.935715709099387!3d29.914918459887165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585567bdbd1139%3A0x10815c4d843b6c7e!2z2YXYr9ix2LPYqSDYp9mK2YHYpyDYp9mE2K_ZiNmE2YrYqSDZhNmE2KrZg9mG2YjZhNmI2KzZitinINin2YTYqti32KjZitmC2YrYqQ!5e0!3m2!1sar!2seg!4v1725103268232!5m2!1sar!2seg" 
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="address">
+                <h2>Address & Contact</h2>
+                <p>مدرسة الزبير ابن العوام الكائنة في جنوب الأحياء ، حي 6 ، مدينة السادس من أكتوبر – محافظة الجيزة.</p>
+                <p>Al-Zubair Ibn Al-Awam School, located in the southern neighborhoods, District 6, 6th of October City - Giza Governorate.</p>
+                <p>Phone: +20</p>
+                <p>Facebook:  <a href="https://www.facebook.com/EVAtechSchool">Click Here</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <!-- Footer start -->
+    <section class="footer">
+        <p class="paragraph mb-sm">
+          Made by
+          <a href="https://www.linkedin.com/in/abdulrahman-reda-28609b2a2">Abdulrhman Reda Abuzaid</a>
+        </p>
+    </section>
+    <!-- Footer end -->
+    <script>
+        const nav = document.getElementById('navbar__list');
+        function showMenu() {
+          nav.style.right = '0px';
+        }
+        function hideMenu() {
+          nav.style.right = '-60rem';
+        }
+      </script>
+    <script>
+        function showMenu() {
+            document.getElementById("nav-links").style.right = "0";
+        }
+
+        function hideMenu() {
+            document.getElementById("nav-links").style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

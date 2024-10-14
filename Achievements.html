@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Achievements.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;300;500;700;800&display=swap" rel="stylesheet">
+    <title>Main</title>
+</head>
+<body>
+    <div class="scrbar">
+        <a href="https://www.usaid.gov/"><img class="USAID" src="pic/USAID.png" alt="USAID"></a>
+        <a href="https://iatseg.org/"><img class="IATS" src="pic/IATS.png" alt="IATS"></a>
+        <a href="https://tech.moe.gov.eg/tech"><img class="GOV" src="pic/GOV.png" alt="GOV"></a>
+        </div>
+    <div class="Themain">
+        <nav>
+            <div class="logo-container">
+                <a href="Index.html">
+                    <img src="pic/logo.svg" alt="First Logo">
+                </a>
+                <a href="Index.html">
+                    <img src="pic/eva-cosmetics-logo_1.png" alt="Second Logo">
+                </a>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Achievements.html">Achievements</a></li>
+                    <li><a href="Location.html">Location</a></li>
+                    <li><a href="App-req.html">Application requirements</a></li>
+                    <li><a href="slider_1-main/slider.html">OUR STAFF</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+      <div class="main">
+        <div class="vid">
+            <video src="pic/ACHvido.mp4" controls></video>
+        </div>
+        
+      </div>   
+      
+      
+
+    </div>
+    <div class="card-body">
+    <div class="card">
+        <div class="image-container">
+            <img src="pic/DRMONA.png" alt="Dr. Mona Rabat">
+            <p class="doctor-name">Dr. Mona Rabat</p>
+        </div>
+        <div class="content">
+            <div class="datE">September 2023</div>
+            <h2>First Achievement</h2>
+            <p>Dr. Mona Rabat is a distinguished Egyptian entrepreneur and medical professional, best known as the co-owner of EVA Pharma, one of the leading pharmaceutical companies in the Middle East and Africa. Under her leadership, EVA Pharma has expanded its reach, developing a wide range of innovative healthcare products that have made significant impacts on both the local and international markets and one of the best Achievements she did is makeing this school EVA-IATS.</p>
+        </div>
+    </div> 
+    </div>   
+
+    <iframe src="slidertab2-main/slider.html" width="100%" height="500"></iframe>
+
+    
+    
+
+   
+
+    <!-- Footer start -->
+    <section class="footer">
+        <p class="paragraph mb-sm">
+          Made by
+          <a href="https://www.linkedin.com/in/abdulrahman-reda-28609b2a2">Abdulrhman Reda Abuzaid</a>
+        </p>
+    </section>
+    <!-- Footer end -->
+
+    <script>
+        const nav = document.getElementById('navbar__list');
+        function showMenu() {
+          nav.style.right = '0px';
+        }
+        function hideMenu() {
+          nav.style.right = '-60rem';
+        }
+      </script>
+
+    <script>
+        function showMenu() {
+            document.getElementById("nav-links").style.right = "0";
+        }
+
+        function hideMenu() {
+            document.getElementById("nav-links").style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
