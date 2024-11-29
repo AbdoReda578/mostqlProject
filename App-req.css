@@ -165,7 +165,7 @@ nav .fa {
 .Themain {
     width: 100%;
     min-height: 35vh;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('http://127.0.0.1:5500/pic/mainBG.png');
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('pic/mainBG.png');
     background-position: center;
     background-size: cover;
     display: grid;
